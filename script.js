@@ -875,6 +875,31 @@ getContactContent() {
     `;
 }
 
+window.QuanticaOS = window.QuanticaOS || {};
+
+QuanticaOS.sendEmail = function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("contact-name")?.value.trim();
+    const email = document.getElementById("contact-email")?.value.trim();
+    const subjectInput = document.getElementById("contact-subject")?.value.trim();
+    const message = document.getElementById("contact-message")?.value.trim();
+
+    if (!name || !email || !subjectInput || !message) {
+        alert("Please fill in all fields before sending.");
+        return;
+    }
+
+    const subject = encodeURIComponent(subjectInput);
+    const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+
+    const mailtoLink =
+        `mailto:saransatsangiguru@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+};
 
     getTerminalContent() {
         return `
@@ -1127,3 +1152,4 @@ window.addEventListener('resize', () => {
 // Prevent drag and drop on the page
 document.addEventListener('dragover', (e) => e.preventDefault());
 document.addEventListener('drop', (e) => e.preventDefault());
+
