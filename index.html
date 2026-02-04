@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuanticaOS - Portfolio Operating System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Boot Loader -->
+    <div id="bootLoader" class="boot-loader">
+        <div class="boot-content">
+            <div class="logo">
+                <span class="logo-text">QuanticaOS</span>
+                <span class="version">v2.0.1</span>
+            </div>
+            <div class="boot-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="boot-text">Booting QuanticaOS v2.1.0...</div>
+            </div>
+            <div class="boot-logs">
+                <div class="log-line">Loading neural networks... <span class="status-ok">[OK]</span></div>
+                <div class="log-line">Initializing kernel...... <span class="status-ok">[OK]</span></div>
+                <div class="log-line">Starting network services... <span class="status-ok">[OK]</span></div>
+                <div class="log-line">Loading system modules... <span class="status-ok">[OK]</span></div>
+                <div class="log-line">Connecting to portfolio database... <span class="status-ok">[OK]</span></div>
+                <div class="log-line">System ready. Welcome to QuanticaOS!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Environment -->
+    <div id="desktop" class="desktop">
+        <!-- Desktop Background -->
+        <div class="desktop-bg"></div>
+
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-app="about">
+                <i class="fas fa-user-circle"></i>
+                <span>About Me</span>
+            </div>
+            <div class="desktop-icon" data-app="projects">
+                <i class="fas fa-code-branch"></i>
+                <span>Projects</span>
+            </div>
+            <div class="desktop-icon" data-app="skills">
+                <i class="fas fa-brain"></i>
+                <span>Skills</span>
+            </div>
+            <div class="desktop-icon" data-app="education">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </div>
+            <div class="desktop-icon" data-app="certifications">
+                <i class="fas fa-certificate"></i>
+                <span>Certifications</span>
+            </div>
+            <div class="desktop-icon" data-app="contact">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+            <div class="desktop-icon" data-app="terminal">
+                <i class="fas fa-terminal"></i>
+                <span>Terminal</span>
+            </div>
+        </div>
+
+        <!-- Windows Container -->
+        <div id="windowsContainer" class="windows-container"></div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="taskbar-left">
+                <div class="start-button">
+                    <i class="fas fa-th"></i>
+                    <span>QuanticaOS</span>
+                </div>
+                <div class="taskbar-apps" id="taskbarApps"></div>
+            </div>
+            <div class="taskbar-right">
+                <div class="system-tray">
+                    <div class="tray-item" id="currentTime"></div>
+                    <div class="tray-item">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="tray-item">
+                        <i class="fas fa-battery-three-quarters"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
